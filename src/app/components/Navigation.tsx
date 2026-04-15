@@ -1,5 +1,5 @@
 import { Link, useLocation } from 'react-router';
-import { Home, ListChecks, Dices, Trophy, Users, User } from 'lucide-react';
+import { Home, ListChecks, Dices, Trophy, Users, User, BookOpen } from 'lucide-react';
 
 const navItems = [
   { path: '/', label: 'Home', icon: Home },
@@ -8,6 +8,7 @@ const navItems = [
   { path: '/scores', label: 'Scores', icon: Trophy },
   { path: '/leaderboard', label: 'Compete', icon: Users },
   { path: '/profile', label: 'Profile', icon: User },
+  { path: '/guide', label: 'Guide', icon: BookOpen }, // ✅ NEW
 ];
 
 export const Sidebar = () => {
@@ -15,6 +16,7 @@ export const Sidebar = () => {
 
   return (
     <aside className="hidden lg:flex flex-col w-64 border-r-4 border-border bg-sidebar p-6 gap-8">
+      {/* Logo */}
       <div>
         <h1 className="text-3xl font-display leading-[0.9] text-accent">
           DICE
@@ -23,6 +25,7 @@ export const Sidebar = () => {
         </h1>
       </div>
 
+      {/* Navigation */}
       <nav className="flex flex-col gap-3">
         {navItems.map((item) => {
           const Icon = item.icon;
@@ -48,6 +51,7 @@ export const Sidebar = () => {
         })}
       </nav>
 
+      {/* Footer */}
       <div className="mt-auto p-4 bg-accent text-accent-foreground">
         <p className="text-xs font-body uppercase tracking-wide">
           Build discipline. Roll dice. Level up.
@@ -81,7 +85,9 @@ export const BottomNav = () => {
               `}
             >
               <Icon className="w-5 h-5" />
-              <span className="text-[9px] font-display uppercase leading-tight text-center">{item.label}</span>
+              <span className="text-[9px] font-display uppercase leading-tight text-center">
+                {item.label}
+              </span>
             </Link>
           );
         })}

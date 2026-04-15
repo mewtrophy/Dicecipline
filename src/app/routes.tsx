@@ -6,6 +6,7 @@ import { DiceChallenge } from './pages/DiceChallenge';
 import { Scores } from './pages/Scores';
 import { Leaderboard } from './pages/Leaderboard';
 import { Profile } from './pages/Profile';
+import { Guide } from './pages/Guide'; // ✅ ADD THIS
 
 export const router = createBrowserRouter([
   {
@@ -18,6 +19,8 @@ export const router = createBrowserRouter([
       { path: 'scores', Component: Scores },
       { path: 'leaderboard', Component: Leaderboard },
       { path: 'profile', Component: Profile },
+      { path: 'guide', Component: Guide }, // ✅ ADD THIS
+
       {
         path: '*',
         Component: () => (
