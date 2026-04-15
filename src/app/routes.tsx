@@ -1,4 +1,4 @@
-import { createBrowserRouter } from 'react-router';
+import { createHashRouter } from 'react-router';
 import { Layout } from './components/Layout';
 import { Home } from './pages/Home';
 import { Habits } from './pages/Habits';
@@ -8,7 +8,7 @@ import { Leaderboard } from './pages/Leaderboard';
 import { Profile } from './pages/Profile';
 import { Guide } from './pages/Guide'; // ✅ ADD THIS
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: '/',
     Component: Layout,
