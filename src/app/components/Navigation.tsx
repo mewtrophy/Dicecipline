@@ -19,9 +19,8 @@ export const Sidebar = () => {
       {/* Logo */}
       <div>
         <h1 className="text-3xl font-display leading-[0.9] text-accent">
-          DICE
-          <br />
-          CIPLINE
+          DICECIPLINE        
+        
         </h1>
       </div>
 
@@ -52,9 +51,9 @@ export const Sidebar = () => {
       </nav>
 
       {/* Footer */}
-      <div className="mt-auto p-4 bg-accent text-accent-foreground">
-        <p className="text-xs font-body uppercase tracking-wide">
-          Build discipline. Roll dice. Level up.
+      <div className="mt-auto p-4 text-muted-foreground">
+        <p className="text-[10px] font-body uppercase tracking-wide">
+          Built by Mew.
         </p>
       </div>
     </aside>
