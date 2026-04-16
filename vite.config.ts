@@ -17,7 +17,6 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-  base: '/Dicecipline/', // ✅ ADD THIS
 
   plugins: [
     figmaAssetResolver(),
